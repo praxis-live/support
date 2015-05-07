@@ -1,0 +1,11 @@
+site_name: Praxis LIVE documentation
+pages:
+  - [index.md, 'Praxis LIVE']
+  - [installation.md, 'General', 'Installation']
+  - [examples.md, 'General', 'Example projects']
+theme: readthedocs
+site_author: ""
+repo_url: https://github.com/praxis-live/support
+include_search: true
+#use_directory_urls: false
+
