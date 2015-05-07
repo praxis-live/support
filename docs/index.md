@@ -22,7 +22,7 @@ It's free, cross-platform and open-source. Download from [www.praxislive.org](ht
 
 ## Getting started
 
-* Installation
+* [Installation](installation.md)
 * Example projects
 * Architecture & Terminology
 * Main interface
