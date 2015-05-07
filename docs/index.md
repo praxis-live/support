@@ -24,7 +24,7 @@ It's free, cross-platform and open-source. Download from [www.praxislive.org](ht
 
 * [Installation](installation.md)
 * [Example projects](examples.md)
-* Architecture & Terminology
+* [Architecture & Terminology](architecture.md)
 * Main interface
 * Projects
 * Editors
