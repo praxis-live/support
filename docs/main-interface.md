@@ -8,18 +8,29 @@ The image below outlines the default window layout. _Praxis LIVE_ uses a typical
 
 Six common actions have buttons in the main toolbar.
 
-| Action                                            | Description                                                                                                    |
-|---------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| ![](img/newProject24.png) **New Project**         | Start the new project wizard.                                                                                  |
-| ![](img/openProject24.png) **Open Project**       | Open the project browser allowing you to open a pre-existing project. The project will open in the `Project`   |
-|                                                   | window, but will not be run.                                                                                   |
-| ![](img/save24.png) **Save File**                 | Save the file currently being edited. **NB. it does not save the entire project.**                             |
-| ![](img/restart24.png) **Restart Hub**            | Restart the _Praxis LIVE_ hub. All installed root components will be removed - a dialog will be opened giving  |
-|                                                   | the option to save any associated files first.                                                                 |
-| ![](img/build.png) **Build Project**              | Build the selected project. This will install any root components in the hub (so they can be edited), but will |
-|                                                   | not run them (play audio, video, etc.)                                                                         |
-| ![](img/run.png) **Run Project**                  | Run the selected project. This will build the project (if necessary) and then start all roots set to run       |
-|                                                   | automatically.                                                                                                 |
+* **New Project** ![](img/newProject24.png)
+
+   Start the new project wizard.
+
+* **Open Project** ![](img/openProject24.png)
+
+   Open the project browser allowing you to open a pre-existing project. The project will open in the `Project` tab, but will not be run.
+
+* **Save File** ![](img/save24.png)
+
+   Save the file currently being edited. **NB. it does not save the entire project.**
+
+* **Restart Hub** ![](img/restart24.png)
+
+   Restart the _Praxis LIVE_ hub. All installed root components will be removed - a dialog will be opened giving the option to save any associated files first.
+
+* **Build Project** ![](img/build.png)
+
+   Build the selected project. This will install any root components in the hub (so they can be edited), but will not run them (play audio, video, etc.)
+
+* **Run Project** ![](img/run.png)
+
+   Run the selected project. This will build the project (if necessary) and then start all roots set to run automatically.
 
 ## Projects / File browser
 
