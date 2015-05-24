@@ -30,7 +30,7 @@ _Praxis LIVE_ is designed to fill the need for a free, open-source and cross-pla
 * [Projects](projects.md)
 * [Editors](editors.md)
 * [Component editors](component-editors.md)
-* Custom components
+* [Custom components](custom-components.md)
 
 ## Creating custom components
 

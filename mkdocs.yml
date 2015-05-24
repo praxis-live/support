@@ -8,6 +8,7 @@ pages:
   - [projects.md, 'General', 'Projects']
   - [editors.md, 'General', 'Editors']
   - [component-editors.md, 'General', 'Component editors']
+  - [custom-components.md, 'General', 'Custom components']
 theme: readthedocs
 site_author: ""
 repo_url: https://github.com/praxis-live/support
