@@ -5,6 +5,7 @@ pages:
   - [examples.md, 'General', 'Example projects']
   - [architecture.md, 'General', 'Architecture & terminology']
   - [main-interface.md, 'General', 'Main interface']
+  - [projects.md, 'General', 'Projects']
 theme: readthedocs
 site_author: ""
 repo_url: https://github.com/praxis-live/support

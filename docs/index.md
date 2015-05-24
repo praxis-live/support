@@ -26,7 +26,7 @@ It's free, cross-platform and open-source. Download from [www.praxislive.org](ht
 * [Example projects](examples.md)
 * [Architecture & terminology](architecture.md)
 * [Main interface](main-interface.md)
-* Projects
+* [Projects](projects.md)
 * Editors
 * Graph editor
 * GUI editor
