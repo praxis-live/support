@@ -17,7 +17,7 @@ actually valid scripts, allowing for projects to also be run using the command l
 
 The `Projects` tab gives you the tools for opening and managing projects. Projects are shown in a tree-like structure which shows you all the user-editable files that make up a _Praxis LIVE_ project.
 
-**@TODO Projects tab image**
+![Projects tab](img/projects.png)
 
 Here you can see two of the example projects opened within the projects tab, with all folders expanded. Note the location of various `.pxr` files which define different roots (video patch, audio patch, control panel), as well as various audio and image resources.
 
@@ -29,6 +29,6 @@ Double-clicking a `.pxr` file will open it in an editor window, such as the grap
 
 You can create a new `.pxr` file, such as an audio or video patch, from the project's pop-up menu. Selecting one of these options will open a wizard which will allow you to provide the root ID, which will also be used as the name of the file. Advanced options allow you to control whether the root will auto-start when the project is run, and whether to install the root immediately in the hub for editing. The default options will be correct in the vast majority of cases.
 
-**@TODO Create new patch image**
+![Creating a new patch](img/new-patch.png)
 
 The `Properties` option in the project's pop-up menu will open the project configuration dialog. Within this you can control which files are included within the `Build` and `Run` stages of a project. You can use this to control which roots auto-start, or to temporarily ignore certain files without deleting them. You can also use this to fix the project configuration in rare cases where _Praxis LIVE_ terminates unexpectedly.

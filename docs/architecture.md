@@ -8,7 +8,7 @@ Individual components within _Praxis LIVE_ (such as a video effect, sample playe
 
 All roots exist within the **Root Hub**. The root hub is a container for roots, but it is not itself a component. All roots are sand-boxed from each other – there is no way for any root or component within it to directly access another root or its components. Instead, the hub acts as a router to pass messages between different roots, local or remote.
 
-**@TODO Root Hub image**
+![Hub Manager with system roots](img/hub-system.png)
 
 Here you can see the **Hub Manager** within _Praxis LIVE_, which gives you a visual representation of the root hub. You will notice that there are 3 user roots running (audio, video and GUI), but that the button is toggled to also show you the system roots. This is another key part of the architecture – all of the system code is equally sand-boxed and confined to using the message-passing system.
 
@@ -18,7 +18,7 @@ Components within _Praxis LIVE_ have two ways of communicating – **Ports** and
 
 Controls are the basis of _Praxis LIVE’s_ message-passing system. They receive, react and respond to messages usually coming from a component within another root. All communication _without exception_ between components in different roots ends with a control receiving a message. Controls have an address consisting of their component address and ID (eg. `/audio/delay.time`) – the dot syntax is a deliberate parallel with method calls.
 
-**@TODO Ports and Controls image**
+![Ports and controls on audio:sampleplayer component](img/audio-beat.png)
 
 Above you can see an example of an `audio:sampleplayer` component in the editor. Ports can be seen on the graph component and controls within the component editor window – note that many controls will have a corresponding port, and vice versa.
 

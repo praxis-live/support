@@ -3,15 +3,15 @@
 Double-clicking on a `.pxr` file will open it in an editor. The type of editor it opens in will depend on the root type (video, audio, gui, etc.). Remember that the project the file belongs to must have
 been built so that the root shows up in the `Hub Manager` before the file can be edited, otherwise the editor will contain a message asking you to build the project.
 
-At the top-right of the editor region are four icons. Three of these allow you to switch between open editors. The maximise icon allows you to enlarge the editor area, minimising all the other windows to the sides and providing more workspace.
+At the top-right of the editor region are four icons. Three of these allow you to switch between open editors. The maximise icon ![](img/view-fullscreen.png) allows you to enlarge the editor area, minimising all the other windows to the sides and providing more workspace.
 
-All editors have their own toolbar, which contains at least two buttons. The play button toggles whether the root is playing / active. The root properties button opens a window allowing you to set properties of the root component (such as video resolution and frame-rate). _Not all root properties can be set while the root is playing_.
+All editors have their own toolbar, which contains at least two buttons. The play button ![](img/play.png) toggles whether the root is playing / active. The root properties button ![](img/properties.png) opens a window allowing you to set properties of the root component (such as video resolution and frame-rate). _Not all root properties can be set while the root is playing_.
 
 You can save a `.pxr` file at any time when the editor is active. You will also be prompted to save whenever the hub is restarting or when a root is removed from the hub. Due to its distributed architecture, _Praxis LIVE_ does not attempt to track all changes, so takes the conservative approach and always prompts you to save.
 
 ## Graph editor
 
-**@TODO graph editor image**
+![Graph editor](img/graph.png)
 
 The default editor is the graph editor, used for audio, video and tinkerforge files. Components and port connections are represented in a graphical form that should be familiar to anyone who has used other patcher-style environments like AudioMulch, Isadora, Max, etc.
 
@@ -33,7 +33,7 @@ While it is usually possible to add and remove components at runtime, be aware t
 
 ## GUI (control panel) editor
 
-**@TODO GUI editor image**
+![GUI editor](img/gui.png)
 
 When you open a GUI / control panel `.pxr` file it will open in the GUI editor. If the GUI was open (running), the external window will be closed and the panel “hijacked” into the editor. The control
 panel is still fully functional when open in the editor.
