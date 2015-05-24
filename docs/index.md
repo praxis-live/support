@@ -27,11 +27,7 @@ It's free, cross-platform and open-source. Download from [www.praxislive.org](ht
 * [Architecture & terminology](architecture.md)
 * [Main interface](main-interface.md)
 * [Projects](projects.md)
-* Editors
-* Graph editor
-* GUI editor
-* MIDI bindings editor
-* OSC bindings editor
+* [Editors](editors.md)
 * Component editors
 * Custom components
 
