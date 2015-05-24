@@ -4,7 +4,7 @@
 
 Praxis LIVE is a hybrid visual IDE for live creative coding.
 
-_easily create projections, interactive spaces, custom VJ tools, sonic performance instruments, live media for theatre; use it as a live digital sketchbook, test out ideas, experiment with code_
+_easily create projections, interactive spaces, custom VJ tools, sonic performance instruments, media for theatre; use it as a live digital sketchbook, test out ideas, experiment with code_
 
 It's free, cross-platform and open-source. Download from [www.praxislive.org](http://www.praxislive.org)
 
@@ -12,13 +12,12 @@ It's free, cross-platform and open-source. Download from [www.praxislive.org](ht
 
 ## Primary Features
 
-* **Media neutral architecture**. Built from the ground up for working with multiple media, using an architecture based around models for distributed processing.
-* **Intuitive patcher-style graphical editor**. Fast visual project building with drag-and-drop creation of components and connections.
-* **Edit everything live**. Built around the central concept that everything should be editable at run time.
-* **Optimized video pipeline**, including a range of pixel effects and blend modes, with software and OpenGL rendering.
-* **Low latency audio support**, including JACK binding.
-* **Custom GUI's and MIDI/OSC control**. Create custom controls panels bound to any parameter, or control any parameter using a MIDI or OSC controller.
-* **Live coding**. For when the built-in component don't offer all you need, create custom components 'on-the-fly' using Java / Processing or GLSL.
+* **Real-time audio / video**. Designed for live manipulation of audio & video. OpenGL graphics pipeline with hardware accelerated video processing. Low-latency audio with optional [JACK](http://www.jackaudio.org/) binding for optimal performance and integration with other software.
+* **Intuitive graphical patching**. Patcher-style editing provides fast visual project building - drag and drop components from the palette; draw in audio, video and control connections. Everything is editable live, providing instant feedback without interrupting your creative flow.
+* **Extend at runtime**. Fork components on-the-fly, or create new ones from scratch, _all without missing a frame or a beat_. Integrated editor support for Java, Processing & GLSL. Export and share, or import from a growing library of custom components.
+* **Custom controllers**. Build your own control panels in the visual GUI editor - widgets automatically configure and sync themselves to bound properties. Map MIDI controllers or OSC addresses to any property, allowing for a wide range of external control options.
+* **Physical computing**. Simple video components for motion tracking and detection can be used to control other parameters. Use the [TinkerForge](http://www.tinkerforge.com/) bindings to provide access to a range of sensors, or control motors, servos & other equipment.
+* **Distributed by Design**. Built from the ground up for working with multiple media, using an architecture based around models for distributed processing. Option to run projects transparently across multiple processes (for performance) or across multiple machines on a network.
 
 ## Getting started
 
@@ -31,7 +30,7 @@ It's free, cross-platform and open-source. Download from [www.praxislive.org](ht
 * Component editors
 * Custom components
 
-## Creating custom componnents
+## Creating custom components
 
 * Coding in Praxis LIVE
 * Annotations
