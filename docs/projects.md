@@ -19,7 +19,7 @@ The `Projects` tab gives you the tools for opening and managing projects. Projec
 
 ![Projects tab](img/projects.png)
 
-Here you can see two of the example projects opened within the projects tab, with all folders expanded. Note the location of various `.pxr` files which define different roots (video patch, audio patch, control panel), as well as various audio and image resources.
+Here you can see one of the example projects opened within the projects tab, with all folders expanded. Note the location of `.pxr` files which define different roots (audio and video), as well as various audio and image resources.
 
 To run a project, select it and use the buttons on the toolbar, or use the pop-up menu on the main project folder.
 
