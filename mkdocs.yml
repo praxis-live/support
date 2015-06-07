@@ -1,17 +1,26 @@
 site_name: Praxis LIVE documentation
 pages:
-  - [index.md, 'Praxis LIVE']
-  - [installation.md, 'General', 'Installation']
-  - [examples.md, 'General', 'Example projects']
-  - [architecture.md, 'General', 'Architecture & terminology']
-  - [main-interface.md, 'General', 'Main interface']
-  - [projects.md, 'General', 'Projects']
-  - [editors.md, 'General', 'Editors']
-  - [component-editors.md, 'General', 'Component editors']
-  - [custom-components.md, 'General', 'Custom components']
+  - Home: 'index.md'
+  - General:
+    - 'Installation': 'installation.md'
+    - 'Example projects': 'examples.md'
+    - 'Architecture & terminology': 'architecture.md'
+    - 'Main interface': 'main-interface.md'
+    - 'Projects': 'projects.md'
+    - 'Editors': 'editors.md'
+    - 'Component editors': 'component-editors.md'
+    - 'Custom components': 'custom-components.md'
+
 theme: readthedocs
+
 site_author: ""
+
 repo_url: https://github.com/praxis-live/support
+
 include_search: true
+
+extra_css:
+    - custom.css
+
 #use_directory_urls: false
 
