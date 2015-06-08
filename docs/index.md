@@ -21,7 +21,9 @@ _Praxis LIVE_ is designed to fill the need for a free, open-source and cross-pla
 * **Physical computing**. Simple video components for motion tracking and detection can be used to control other parameters. Use the [TinkerForge](http://www.tinkerforge.com/) bindings to provide access to a range of sensors, or control motors, servos & other equipment.
 * **Distributed by Design**. Built from the ground up for working with multiple media, using an architecture based around models for distributed processing. Option to run projects transparently across multiple processes (for performance) or across multiple machines on a network.
 
-## Getting started
+<h2>Contents</h2>
+
+<h3>Getting started</h3>
 
 * [Installation](installation.md)
 * [Example projects](examples.md)
@@ -32,14 +34,14 @@ _Praxis LIVE_ is designed to fill the need for a free, open-source and cross-pla
 * [Component editors](component-editors.md)
 * [Custom components](custom-components.md)
 
-## Creating custom components
+<h3>Creating custom components</h3>
 
 * Coding in Praxis LIVE
 * [Annotations](annotations.md)
 * [Additional annotations](annotations-additional.md)
 * Properties
 
-## Advanced usage
+<h3>Advanced usage</h3>
 
 * Distributed hubs
 * CLI player
