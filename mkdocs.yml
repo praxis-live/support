@@ -10,13 +10,8 @@ pages:
     - 'Component editors': 'component-editors.md'
     - 'Custom components': 'custom-components.md'
   - 'Creating custom components':
-    - 'Coding in Praxis LIVE': ''
     - 'Annotations': 'annotations.md'
     - 'Additional annotations': 'annotations-additional.md'
-  - 'Advanced usage':
-    - 'Distributed hubs': ''
-    - 'CLI player': ''
-    - 'Terminal': ''
 
 theme: readthedocs
 
