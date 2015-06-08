@@ -35,7 +35,8 @@ _Praxis LIVE_ is designed to fill the need for a free, open-source and cross-pla
 ## Creating custom components
 
 * Coding in Praxis LIVE
-* Annotations
+* [Annotations](annotations.md)
+* [Additional annotations](annotations-additional.md)
 * Properties
 
 ## Advanced usage
