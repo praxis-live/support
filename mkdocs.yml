@@ -1,7 +1,6 @@
 site_name: Praxis LIVE documentation
 pages:
-  - Home: 'index.md'
-  - General:
+  - 'Getting started':
     - 'Installation': 'installation.md'
     - 'Example projects': 'examples.md'
     - 'Architecture & terminology': 'architecture.md'
