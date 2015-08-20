@@ -15,7 +15,7 @@ Base for core (not audio, video, etc.) components. No ports or controls by defau
 Stores a property, and sends it from its output port whenever a new value is received. Also sends its value when the root container starts (eg. audio starts playing).
 
 - **out** _ControlOut_
-- **value** _Property_ set / get value.
+- **value** _Property_ : set / get value.
 
 ## core:start-trigger
 
