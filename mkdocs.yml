@@ -10,6 +10,10 @@ pages:
     - 'Editors': 'editors.md'
     - 'Component editors': 'component-editors.md'
     - 'Custom components': 'custom-components.md'
+  - 'Built-in components':
+    - 'Core components': 'components-core.md'
+    - 'Audio components': 'components-audio.md'
+    - 'Video components': 'components-video.md'
   - 'Creating custom components':
     - 'Annotations': 'annotations.md'
     - 'Additional annotations': 'annotations-additional.md'

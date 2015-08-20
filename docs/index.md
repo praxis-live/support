@@ -34,6 +34,12 @@ _Praxis LIVE_ is designed to fill the need for a free, open-source and cross-pla
 * [Component editors](component-editors.md)
 * [Custom components](custom-components.md)
 
+<h3>Built-in components</h3>
+
+* [Core components](components-core.md)
+* [Audio components](components-audio.md)
+* [Video components](components-video.md)
+
 <h3>Creating custom components</h3>
 
 * Coding in Praxis LIVE
