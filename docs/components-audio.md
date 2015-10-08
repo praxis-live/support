@@ -38,8 +38,8 @@ Samples are loaded in the background. If using the `sample` port to load new sam
 The player will not start automatically. To get it to start when the audio root is started, use a `core:start-trigger` attached to the play port.
 
 - **out** : _AudioOut_
-- **sample** : _Property (uri)_ : audio file
-- **position** : _Property (number 0..1)_ : normalized playback position
+- **sample** : _Property (empty or resource)_ : audio file
+- **position** : _Property (number 0..1, transient)_ : normalized playback position
 - **start** : _Property (number 0..1)_ : start point for playback / looping
 - **end** : _Property (number 0..1)_ : end point for playback / looping
 - **speed** : _Property (number -4..4)_ : playback speed (supports reverse play)
@@ -179,7 +179,7 @@ A mono phrase sampler. Supports in/out points, variable speed.
 
 - **in** : _AudioIn_
 - **out** : _AudioOut_
-- **position** : _Property (number 0..1)_ : normalized playback position
+- **position** : _Property (number 0..1, transient)_ : normalized playback position
 - **start** : _Property (number 0..1)_ : start point for playback / looping
 - **end** : _Property (number 0..1)_ : end point for playback / looping
 - **speed** : _Property (number -4..4)_ : playback speed (supports reverse play)
@@ -197,8 +197,8 @@ Samples are loaded in the background. If using the `sample` port to load new sam
 The player will not start automatically. To get it to start when the audio root is started, use a `core:start-trigger` attached to the play port.
 
 - **out** : _AudioOut_
-- **sample** : _Property (uri)_ : audio file
-- **position** : _Property (number 0..1)_ : normalized playback position
+- **sample** : _Property (empty or resource)_ : audio file
+- **position** : _Property (number 0..1, transient)_ : normalized playback position
 - **start** : _Property (number 0..1)_ : start point for playback / looping
 - **end** : _Property (number 0..1)_ : end point for playback / looping
 - **speed** : _Property (number -4..4)_ : playback speed (supports reverse play)
