@@ -16,6 +16,7 @@ pages:
     - 'Video components': 'components-video.md'
     - 'GUI components': 'components-gui.md'
   - 'Creating custom components':
+    - 'Coding in Praxis LIVE': 'coding.md'
     - 'Annotations': 'annotations.md'
     - 'Additional annotations': 'annotations-additional.md'
   - 'Advanced usage':
