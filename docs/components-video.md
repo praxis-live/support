@@ -189,14 +189,14 @@ Can only be used with the OpenGL renderer.
 - **out** : _VideoOut_
 - **vertex** : _Property (empty or string)_ : vertex shader code, or empty for default
 - **fragment** : _Property (empty or string)_ : fragment shader code, or empty for default
-- **u1** : _Property (number 0..1)_ : uniform value which can be read in shader using `unform float u1`
-- **u2** : _Property (number 0..1)_ : uniform value which can be read in shader using `unform float u2`
-- **u3** : _Property (number 0..1)_ : uniform value which can be read in shader using `unform float u3`
-- **u4** : _Property (number 0..1)_ : uniform value which can be read in shader using `unform float u4`
-- **u5** : _Property (number 0..1)_ : uniform value which can be read in shader using `unform float u5`
-- **u6** : _Property (number 0..1)_ : uniform value which can be read in shader using `unform float u6`
-- **u7** : _Property (number 0..1)_ : uniform value which can be read in shader using `unform float u7`
-- **u8** : _Property (number 0..1)_ : uniform value which can be read in shader using `unform float u8`
+- **u1** : _Property (number 0..1)_ : uniform value which can be read in shader using `uniform float u1`
+- **u2** : _Property (number 0..1)_ : uniform value which can be read in shader using `uniform float u2`
+- **u3** : _Property (number 0..1)_ : uniform value which can be read in shader using `uniform float u3`
+- **u4** : _Property (number 0..1)_ : uniform value which can be read in shader using `uniform float u4`
+- **u5** : _Property (number 0..1)_ : uniform value which can be read in shader using `uniform float u5`
+- **u6** : _Property (number 0..1)_ : uniform value which can be read in shader using `uniform float u6`
+- **u7** : _Property (number 0..1)_ : uniform value which can be read in shader using `uniform float u7`
+- **u8** : _Property (number 0..1)_ : uniform value which can be read in shader using `uniform float u8`
 
 ## video:gl:p3d
 
