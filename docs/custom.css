@@ -1,7 +1,7 @@
 /* Force width: auto on mobile images */
 
 img {
-    width: auto !important
+    width: auto !important;
 }
 
 /* Suppress first heading in the ToC */
