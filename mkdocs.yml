@@ -18,6 +18,10 @@ pages:
   - 'Creating custom components':
     - 'Annotations': 'annotations.md'
     - 'Additional annotations': 'annotations-additional.md'
+  - 'Advanced usage':
+    - 'Command line player': 'cli-player.md'
+    - 'Distributed hubs': 'distributed-hubs.md'
+    - 'Terminal': 'terminal.md'
 
 theme: readthedocs
 

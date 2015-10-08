@@ -50,9 +50,9 @@ _Praxis LIVE_ is designed to fill the need for a free, open-source and cross-pla
 
 <h3>Advanced usage</h3>
 
-* Distributed hubs
-* CLI player
-* Terminal
+* [Command line player](cli-player.md)
+* [Distributed hubs](distributed-hubs.md)
+* [Terminal](terminal.md)
 
 ## Contact / support
 
