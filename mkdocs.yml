@@ -14,6 +14,7 @@ pages:
     - 'Core components': 'components-core.md'
     - 'Audio components': 'components-audio.md'
     - 'Video components': 'components-video.md'
+    - 'GUI components': 'components-gui.md'
   - 'Creating custom components':
     - 'Annotations': 'annotations.md'
     - 'Additional annotations': 'annotations-additional.md'
