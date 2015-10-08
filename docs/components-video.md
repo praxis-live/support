@@ -11,6 +11,7 @@ A capture device will not start automatically. You can attach a `core:start-trig
 The device property is empty by default. It must be set before capture can be started.
 
 - **out** : _VideoOut_
+- **device** : _Property (empty, number 1..4 or string)_ : device index or gstreamer pipeline or empty to clear
 - **resize-mode** : _Property (Crop, Stretch, Scale)_ : control how the video capture size is adapted to the output size
 - **align-x** : _Property (number 0..1)_ : horizontal alignment (only when using resize-mode Crop or Scale)
 - **align-y** : _Property (number 0..1)_ : vertical alignment (only when using resize-mode Crop or Scale)
