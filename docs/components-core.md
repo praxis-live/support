@@ -8,7 +8,7 @@ Core components can be used with all files (audio, video, tinkerforge, etc.) in 
 
 ## core:custom
 
-Base for core (not audio, video, etc.) components. No ports or controls by default. See coding guide.
+Base for core (not audio, video, etc.) components. No ports or controls by default. See [coding guide](coding.md).
 
 ## core:property
 
@@ -22,6 +22,19 @@ Stores a property, and sends it from its output port whenever a new value is rec
 Output a signal (empty value) when the root container starts.
 
 - **out** : _ControlOut_
+
+## core:tracker
+
+Tracker sequencing component, supporting 8 channels and multiple patterns. The `trigger` port would normally be connected to a `core:timing:timer` or `audio:clock` component.
+
+Use `Edit patterns` from the component popup menu to open the pattern table editor. Use `Save (CTRL-S)` to update the component.
+
+- **out-N** : _ControlOut_ : output for N channel
+- **patterns** : _Property_ : pattern data
+- **pattern** : _Property (integer 0..)_ : current pattern
+- **position** : _Property (integer 0.., transient)_ : current row position in pattern
+- **trigger** : _Action_ : send current row from outs and increment position
+- **reset** : _Action_ : reset position to 0
 
 ## core:variable
 
