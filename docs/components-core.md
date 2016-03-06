@@ -124,6 +124,16 @@ Takes a number on its input port and sends it from its out-high port if greater 
 - **out-high** : _ControlOut_
 - **threshold** : _Property (number)_
 
+## core:routing:every
+
+Allow every `count` message through.
+
+- **in** : _ControlIn_
+- **out** : _ControlOut_
+- **count** : _Property (integer 1..)_
+- **position** : _Property (integer 0.., read-only)_ : current position in count
+- **reset** : _Action_ : reset position to 0 - next input will be allowed through
+
 ## core:routing:gate
 
 A gate for control signals. Stops signals getting through when inactive.
@@ -155,6 +165,14 @@ Repeated signals to the arming port will be ignored.
 - **in-2** : _ControlIn_
 - **out** : _ControlOut_
 - **reset** : _Action_ : un-arm component.
+
+## core:routing:order
+
+Send input to all ports connected to `out-1` before `out-2`.
+
+- **in** : _ControlIn_
+- **out-1** : _ControlOut_
+- **out-2** : _ControlOut_
 
 ## core:routing:send
 
