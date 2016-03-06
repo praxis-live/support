@@ -1,8 +1,21 @@
 # Audio components
 
+## audio:clock
+
+A timer for audio patches synchronized to the sample rate clock. Sends a signal (empty value) every period.
+
+For consistency, the pulse is quantized to a set number of audio buffers, so may differ slightly from the requested value.
+
+- **out** : _ControlOut_
+- **bpm** : _Property (number 10..300)_ : beats per minute.
+- **subdivision** : _Property (integer 1..16)_ : number of pulses per beat (eg. default 4 is equivalent to semiquaver).
+- **actual-bpm** : _Property (number, read-only)_ : the actual bpm taking into account quantization.
+- **period** : _Property (number, read-only)_ : the actual period in seconds.
+- **buffer-count** : _Property (integer, read-only)_ : the number of audio buffers per pulse
+
 ## audio:custom
 
-Base for audio components. No ports or controls by default. See coding guide.
+Base for audio components. No ports or controls by default. See [coding guide](coding.md).
 
 ## audio:gain
 
