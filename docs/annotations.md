@@ -1,6 +1,6 @@
 # Annotations
 
-The primary annotations listed here connect fields and methods in code to ports and controls within the graphical editor. [Additional annotations](annotations-additional.md) can be used to enhance these annotations, such as specifying the range of a numeric property or the mime-type of a String.
+The primary annotations listed here connect fields and methods in code to the wider _Praxis LIVE_ environment by defining ports & controls, or by automatically creating and injecting values. [Additional annotations](annotations-additional.md) can be used to enhance some of these annotations, such as specifying the range of a numeric property or the mime-type of a String.
 
 Fields should not be set when declared - values will be injected automatically by the environment.
 
@@ -73,18 +73,18 @@ void update() {
 ## @P
 
 ```java
-@interface Property {
+@interface P {
   int value();
 }
 ```
 
 Mark a field as a property. A control will be added to the component, and (by default) an input port. The value specifies the index of the property relative to other properties - all properties must have a unique index.
 
-Supported on fields of type `boolean`, `double`, `int`, `String`, `Argument`, `PImage` and `Property`.
+Supported on core fields of type `boolean`, `double`, `int`, `String` and `Property`. Audio components also support use on fields of type `Table`. Video components also support use on fields of type `PImage`.
 
 Fields may be written to as well as read. All property controls are actually backed by a Property object, which offers additional features such as animation. Some properties (eg. `PImage`) support background loading of a resource from a file.
 
-Properties may be hidden from the editor by prefixing their name with an underscore - particularly useful for animation. Hidden properties still maintain state across code changes.
+<s>Properties may be hidden from the editor by prefixing their name with an underscore - particularly useful for animation. Hidden properties still maintain state across code changes.</s> Deprecated - see [`@Inject`](#inject)
 
 ### Examples
 
@@ -114,8 +114,32 @@ void draw() {
 }
 ```
 
+## @Inject
+
 ```java
-@P(100) Property _timer; // hidden animatable value
+@interface Inject
+```
+
+Mark a field as a hidden property, particularly useful for animation. Hidden properties do not show up in the editor and their state is not saved as part of the project. However, unlike normal fields they maintain state across code changes.
+
+Supported on core fields of type `boolean`, `double`, `int`, `String` and `Property`.
+
+Unlike `@P`, the `@Inject` annotation does not require an index and so multiple fields of the same type may be declared together.
+
+### Examples
+
+```java
+@Inject double x, y;
+```
+
+```java
+@Inject Property timer;
+
+void update() {
+  if (!timer.isAnimating()) {
+    timer.set(0).to(60).in(60);
+  }
+}
 ```
 
 ## @T
@@ -165,7 +189,7 @@ void draw() {
 }
 ```
 
-Mark a field or method as an auxillary input. Works almost identically to `@In` except that ports appear underneath input, output, property and trigger ports.
+Mark a field or method as an auxillary input. Works almost identically to `@In` except that ports appear after input, output, property and trigger ports.
 
 ## @AuxOut
 
@@ -175,4 +199,24 @@ Mark a field or method as an auxillary input. Works almost identically to `@In` 
 }
 ```
 
-Mark a field or method as an auxillary output. Works almost identically to `@Out` except that ports appear underneath input, output, property, trigger and auxillary input ports.
+Mark a field or method as an auxillary output. Works almost identically to `@Out` except that ports appear after input, output, property, trigger and auxillary input ports.
+
+## @OffScreen
+
+```java
+@interface OffScreen {
+  int width() default 0;
+  int height() default 0;
+  OffScreen.Format format() default OffScreen.Format.Default; // also RGB and ARGB
+}
+```
+
+Mark a `PGraphics` field to create an offscreen surface for rendering. Only supported by `video:custom`. See [Coding video components](coding-video.md) for more information.
+
+## @UGen
+
+```java
+@interface UGen
+```
+
+Mark a field as an audio unit generator. Only supported on fields subclassing `Pipe` in `audio:custom`. See [Coding audio components](coding-audio.md) for more information.

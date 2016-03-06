@@ -17,6 +17,12 @@ pages:
     - 'GUI components': 'components-gui.md'
   - 'Creating custom components':
     - 'Coding in Praxis LIVE': 'coding.md'
+    - 'Coding core components': 'coding-core.md'
+    - 'Coding audio components': 'coding-audio.md'
+    - 'Coding video components': 'coding-video.md'
+    - 'Coding OpenGL video components': 'coding-video-gl.md'
+    - 'Coding TinkerForge components': 'coding-tinkerforge.md'
+    - 'Properties & animation': 'properties.md'
     - 'Annotations': 'annotations.md'
     - 'Additional annotations': 'annotations-additional.md'
   - 'Advanced usage':

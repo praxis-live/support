@@ -9,3 +9,11 @@ img {
 li.toctree-l3:first-child {
     display: none;
 }
+
+a code {
+    text-decoration: underline;
+}
+
+a:hover code {
+    text-decoration: none;
+}

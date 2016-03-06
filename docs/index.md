@@ -44,9 +44,15 @@ _Praxis LIVE_ is designed to fill the need for a free, open-source and cross-pla
 <h3>Creating custom components</h3>
 
 * [Coding in Praxis LIVE](coding.md)
+* [Coding core components](coding-core.md)
+* [Coding audio components](coding-audio.md)
+* [Coding video components](coding-video.md)
+* [Coding OpenGL video components](coding-video-gl.md)
+* [Coding Tinkerforge components](coding-tinkerforge.md)
+* [Properties & animation](properties.md)
 * [Annotations](annotations.md)
 * [Additional annotations](annotations-additional.md)
-* Properties
+
 
 <h3>Advanced usage</h3>
 
