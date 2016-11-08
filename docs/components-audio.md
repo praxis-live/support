@@ -19,12 +19,11 @@ Base for audio components. No ports or controls by default. See [coding guide](c
 
 ## audio:gain
 
-Control audio gain (volume). Multiple gain components can be controlled as one using the `link` port.
+Control audio gain (volume).
 
 - **in** : _AudioIn_
 - **out** : _AudioOut_
 - **level** : _Property (number 0..2)_ : gain level.
-- **link** : _Link_ : Link gain components together (the level parameter will be synced).
 
 ## audio:input
 
@@ -59,7 +58,7 @@ Samples are loaded in the background. If using the `sample` port to load new sam
 
 The player will not start automatically. To get it to start when the audio root is started, use a `core:start-trigger` attached to the play port.
 
-- **out-1 | out-2** : _AudioOut_
+- **out-1 / out-2** : _AudioOut_
 - **sample** : _Property (empty or resource)_ : audio file
 - **position** : _Property (number 0..1, transient)_ : normalized playback position
 - **start** : _Property (number 0..1)_ : start point for playback / looping
@@ -99,8 +98,8 @@ A chorus component.
 
 This is similar to `audio:fx:lfo-delay` but with more limited range on parameters.
 
-- **in-1 | in-2** : _AudioIn_
-- **out-1 | out-2** : _AudioOut_
+- **in-1 / in-2** : _AudioIn_
+- **out-1 / out-2** : _AudioOut_
 - **depth** : _Property (number 0..40)_ : depth of chorus measured in milliseconds
 - **rate** : _Property (number 0..15)_ : rate of LFO in Hz
 - **feedback** : _Property (number 0..1)_ : amount of signal fed back into input
@@ -109,8 +108,8 @@ This is similar to `audio:fx:lfo-delay` but with more limited range on parameter
 
 A comb filter.
 
-- **in-1 | in-2** : _AudioIn_
-- **out-1 | out-2** : _AudioOut_
+- **in-1 / in-2** : _AudioIn_
+- **out-1 / out-2** : _AudioOut_
 - **frequency** : _Property (number 20..20000)_ : frequency of filter
 - **feedback** : _Property (number 0..1)_ : amount of signal fed back into input
 
@@ -118,8 +117,8 @@ A comb filter.
 
 A simple delay (echo) component.
 
-- **in-1 | in-2** : _AudioIn_
-- **out-1 | out-2** : _AudioOut_
+- **in-1 / in-2** : _AudioIn_
+- **out-1 / out-2** : _AudioOut_
 - **time** : _Property (number 0..2)_ : delay time in seconds
 - **feedback** : _Property (number 0..1)_ : amount of signal fed back into input
 
@@ -129,8 +128,8 @@ An Infinite impulse response (IIR) filter with various types.
 
 Types are LP6, LP12, HP12, BP12, NP12, LP24, HP24.
 
-- **in-1 | in-2** : _AudioIn_
-- **out-1 | out-2** : _AudioOut_
+- **in-1 / in-2** : _AudioIn_
+- **out-1 / out-2** : _AudioOut_
 - **type** : _Property (in Types)_
 - **frequency** : _Property (number)_ : frequency of filter
 - **resonance** : _Property (number 0..30)_ : resonance of filter
@@ -141,8 +140,8 @@ A delay with delay time controlled by a low frequency oscillator.
 
 This is similar to `audio:modulation:chorus` but with a wider range on parameters.
 
-- **in-1 | in-2** : _AudioIn_
-- **out-1 | out-2** : _AudioOut_
+- **in-1 / in-2** : _AudioIn_
+- **out-1 / out-2** : _AudioOut_
 - **time** : _Property (number 0..1)_ : average delay time in seconds
 - **range** : _Property (number 0..1)_ : depth of LFO as proportion of delay time
 - **rate** : _Property (number 0..40)_ : rate of LFO in Hz
@@ -152,16 +151,16 @@ This is similar to `audio:modulation:chorus` but with a wider range on parameter
 
 A simple overdrive distortion effect.
 
-- **in-1 | in-2** : _AudioIn_
-- **out-1 | out-2** : _AudioOut_
+- **in-1 / in-2** : _AudioIn_
+- **out-1 / out-2** : _AudioOut_
 - **drive** : _Property (number 0..1)_ : distortion level
 
 ## audio:fx:reverb
 
 A stereo reverb, port of the popular Freeverb.
 
-- **in-1 | in-2** : _AudioIn_
-- **out-1 | out-2** : _AudioOut_
+- **in-1 / in-2** : _AudioIn_
+- **out-1 / out-2** : _AudioOut_
 - **room-size** : _Property (number 0..1)_
 - **damp** : _Property (number 0..1)_ : amount of damping
 - **width** : _Property (number 0..1)_ : stereo width
