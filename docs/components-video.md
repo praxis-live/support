@@ -198,14 +198,21 @@ Can only be used with the OpenGL renderer.
 - **u7** : _Property (number 0..1)_ : uniform value which can be read in shader using `uniform float u7`
 - **u8** : _Property (number 0..1)_ : uniform value which can be read in shader using `uniform float u8`
 
-## video:gl:p3d
+## video:gl:p2d
 
-Base for video components with almost complete access to the Processing 3D renderer. See coding guide and examples / custom components library.
+Base for video components with almost complete access to the Processing P2D renderer. See coding guide and examples / custom components library.
 
 Can only be used with the OpenGL renderer.
 
 - **out** : _VideoOut_
 
+## video:gl:p3d
+
+Base for video components with almost complete access to the Processing P3D renderer. See coding guide and examples / custom components library.
+
+Can only be used with the OpenGL renderer.
+
+- **out** : _VideoOut_
 
 ## video:source:noise
 

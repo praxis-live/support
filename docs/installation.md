@@ -2,15 +2,15 @@
 
 ## Download
 
-_Praxis LIVE_ can be downloaded from [http://www.praxislive.org/download](http://www.praxislive.org/download)
+The latest _Praxis LIVE_ can be downloaded from [http://www.praxislive.org/download](http://www.praxislive.org/download)
 
 Platform-specific packages are available for Windows, OS X and Linux. There is also a cross-platform Zip bundle.
 
 ## System requirements
 
-_Praxis LIVE_ requires Java 7 or above, either Oracle's distribution or OpenJDK.
+_Praxis LIVE_ requires Java 8 or above, either Oracle's distribution or OpenJDK.
 
-On Linux, GStreamer 0.10 will be required for video playback and capture. Windows and OS X GStreamer libraries are already included where applicable.
+GStreamer 1.x is required for video capture and playback. Since v3 the GStreamer libraries are not included in the Praxis LIVE downloads for Windows and OSX - this is to reduce their size and ensure you can always use the GStreamer version you want. Latest recommended download links for GStreamer on Windows and OSX will be shown on the **Start Page** in the application and on the [GitHub releases page](https://github.com/praxis-live/praxis-live/releases).
 
 ## Windows
 
@@ -18,13 +18,13 @@ On Linux, GStreamer 0.10 will be required for video playback and capture. Window
 
 Download and run the installer. You may need to give it permission to make changes to your system. The installer will (by default) create a menu entry and desktop shortcut, and offer to start _Praxis LIVE_ directly after installation.
 
-## Linux
-
-The Linux `.deb` package should work on any Debian / Ubuntu derived system. Installation requires admin permissions, and can be managed like any other software on your system. The package file should open by default in GDebi or Ubuntu Software Centre.
-
 ## OS X
 
-_Praxis LIVE_ is available as an OS X Application Bundle. Simply download and extract the bundle from the Zip archive.
+_Praxis LIVE_ is available as an OS X Application Bundle. Simply download and extract the bundle from the Zip archive. **Make sure you already have Java 8 installed or the bundle will fail to run**.
+
+## Linux
+
+The Linux `.deb` package should work on any Debian / Ubuntu derived system. Installation requires admin permissions, and can be managed like any other software on your system. The package file should open by default in GDebi or Ubuntu Software Centre. GStreamer 1.x will be recommended in the unlikely event it is not already installed.
 
 ## Zip bundle
 

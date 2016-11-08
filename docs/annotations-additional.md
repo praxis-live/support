@@ -173,10 +173,13 @@ int count;
   double min() default PNumber.MIN_VALUE;
   double max() default PNumber.MAX_VALUE;
   double def() default 0;
+  double skew() default 1;
 }
 ```
 
 Specify a property is numeric (`double`) with optional range and default value. Ranged numeric properties will show as a slider in the property editor.
+
+The `skew` value is used to alter the behaviour of sliders - eg. use a value of `2` or `4` to make the slider more suitable for frequency or volume. Technically the normalised range of the slider (0..1) is raised to the power of skew.
 
 ### Examples
 

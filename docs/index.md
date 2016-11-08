@@ -1,5 +1,3 @@
-**Documentation in development**
-
 ![Praxis LIVE logo](img/praxislive.png)
 
 Praxis LIVE is a hybrid visual IDE for live creative coding.
@@ -8,7 +6,7 @@ _easily create projections, interactive spaces, custom VJ tools, sonic performan
 
 Download from [www.praxislive.org](http://www.praxislive.org)
 
-![Praxis LIVE screenshot](img/PL2.jpg)
+![Praxis LIVE screenshot](img/PL300.jpg)
 
 ## Primary Features
 

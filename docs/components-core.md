@@ -4,7 +4,7 @@ Core components can be used with all files (audio, video, tinkerforge, etc.) in 
 
 ## core:container
 
-@TODO
+Component that can contain other components. Use `core|audio|video:container:in|out` to add ports.
 
 ## core:custom
 
@@ -71,11 +71,13 @@ If the array is empty, an empty string will be sent instead.
 - **values** : _Property (array)_ : set / get values array.
 - **trigger** : _Action_ : trigger random output.
 
-## core:container:input
+## core:container:in
 
-## core:container:output
+Adds a control input port to the parent container.
 
-## core:container:property
+## core:container:out
+
+Adds a control output port to the parent container.
 
 ## core:math:add
 
