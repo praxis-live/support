@@ -32,7 +32,7 @@ This constant should be used whenever a callback period value needs to be set on
 
 ## Example
 
-This is the code used to wrap the TinkerForge infra-red distance sensor within _Praxis LIVE_
+This is the code used to wrap the TinkerForge infra-red distance sensor within _PraxisLIVE_
 
 ```java
 @TinkerForge BrickletDistanceIR device;

@@ -19,7 +19,7 @@ All `video:gl:p2d` and `video:gl:p3d` components have an automatically generated
 
 Video input ports can be created by annotating a `PImage` field with the [`@In`](annotations.md#in) annotation.
 
-The `PImage` type in _Praxis LIVE_ is read-only and does not support any of the methods from Processing. It does have fields for width and height.
+The `PImage` type in _PraxisLIVE_ is read-only and does not support any of the methods from Processing. It does have fields for width and height.
 
 ## Loading images
 

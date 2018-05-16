@@ -19,7 +19,7 @@ All `video:custom` components have an automatically generated video output port 
 
 Video input ports can be created by annotating a `PImage` field with the [`@In`](annotations.md#in) annotation.
 
-The `PImage` type in _Praxis LIVE_ is read-only and does not support any of the methods from Processing. It does have fields for width and height.
+The `PImage` type in _PraxisLIVE_ is read-only and does not support any of the methods from Processing. It does have fields for width and height.
 
 ## Loading images
 
@@ -33,7 +33,7 @@ It is possible to create an offscreen rendering surface, for example to grab a s
 
 ## Zero-copy images
 
-It is important to note that _Praxis LIVE_ has an important extension to the Processing API to support efficient passing of video frames through the pipeline. If you want to copy an image input to the output or an offscreen graphics you should not use -
+It is important to note that _PraxisLIVE_ has an important extension to the Processing API to support efficient passing of video frames through the pipeline. If you want to copy an image input to the output or an offscreen graphics you should not use -
 
 ```java
 image(in, 0, 0);
@@ -51,13 +51,13 @@ offscreen.copy(in);
 release(in);
 ```
 
-This passes through a reference to the underlying image data rather than rendering it. _Praxis LIVE_ tracks use of the image data, and whether it is being read or written to, only copying the data when required. In the given example you should not use the `in` image again after releasing it until the next frame - it will contain no / random data.
+This passes through a reference to the underlying image data rather than rendering it. _PraxisLIVE_ tracks use of the image data, and whether it is being read or written to, only copying the data when required. In the given example you should not use the `in` image again after releasing it until the next frame - it will contain no / random data.
 
 You can also use `copy()` on an image loaded from a file, but in this case do not release it unless you are really finished with the image!
 
 ## Blend modes
 
-_Praxis LIVE_ works differently to the standard Processing API with respect to blending modes. Blend mode definitions are based on common usage, which may not always match Processing's definitions. _Praxis LIVE_ also works throughout with pre-multiplied alpha blending to ensure blending behaves as expected throughout the pipeline (Processing is broken in this respect!)
+_PraxisLIVE_ works differently to the standard Processing API with respect to blending modes. Blend mode definitions are based on common usage, which may not always match Processing's definitions. _PraxisLIVE_ also works throughout with pre-multiplied alpha blending to ensure blending behaves as expected throughout the pipeline (Processing is broken in this respect!)
 
 As well as specifiying a blend mode for rendering you can also specify an opacity.
 

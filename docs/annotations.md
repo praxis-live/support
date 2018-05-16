@@ -1,6 +1,6 @@
 # Annotations
 
-The primary annotations listed here connect fields and methods in code to the wider _Praxis LIVE_ environment by defining ports & controls, or by automatically creating and injecting values. [Additional annotations](annotations-additional.md) can be used to enhance some of these annotations, such as specifying the range of a numeric property or the mime-type of a String.
+The primary annotations listed here connect fields and methods in code to the wider _PraxisLIVE_ environment by defining ports & controls, or by automatically creating and injecting values. [Additional annotations](annotations-additional.md) can be used to enhance some of these annotations, such as specifying the range of a numeric property or the mime-type of a String.
 
 Fields should not be set when declared - values will be injected automatically by the environment.
 

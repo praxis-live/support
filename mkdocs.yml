@@ -8,6 +8,10 @@ pages:
     - 'Main interface': 'main-interface.md'
     - 'Projects': 'projects.md'
     - 'Editors': 'editors.md'
+    - 'Graph editor': 'editors-graph.md'
+    - 'GUI editor': 'editors-gui.md'
+    - 'MIDI editor': 'editors-midi.md'
+    - 'OSC editor': 'editors-osc.md'
     - 'Component editors': 'component-editors.md'
     - 'Custom components': 'custom-components.md'
   - 'Built-in components':

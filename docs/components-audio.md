@@ -27,11 +27,32 @@ Control audio gain (volume).
 
 ## audio:input
 
-Input from audio device. An input is optional in an audio graph. Supports 1-16 channels (default 2). Ports will be added dynamically.
+Input from audio device. An input is optional in an audio graph. Supports 1-16 channels (default 2).
+Ports will be added dynamically.
 
 - **out-1** : _AudioOut_
 - **out-2** : _AudioOut_
 - **channels** : _Property (1..16)_ : number of channels.
+
+## audio:looper
+
+A stereo sample looper. Supports recording, looping, in/out points, variable speed.
+
+The looper will not start automatically. To get it to start when the audio root is
+started, use a `core:start-trigger` attached to the play port.
+
+- **in-1 / in-2** : _AudioIn_
+- **out-1 / out-2** : _AudioOut_
+- **recording** : _Property (boolean)_ : record input (must be playing)
+- **play** : _Action_ : start playback
+- **stop** : _Action_ : stop playback
+- **position** : _Property (number 0..1, transient)_ : normalized playback position
+- **start** : _Property (number 0..1)_ : start point for playback / looping
+- **end** : _Property (number 0..1)_ : end point for playback / looping
+- **speed** : _Property (number -4..4)_ : playback speed (supports reverse play)
+- **loop** : _Property (boolean)_ : loop playback
+- **playing** : _Property (boolean, transient)_ : playing
+- **loop-size** : _Property (number 0..5)_ : loop size in seconds
 
 ## audio:osc
 
@@ -44,7 +65,8 @@ Simple oscillator
 
 ## audio:output
 
-Output to audio device. An output is required in an audio graph. Supports 1-16 channels (default 2). Ports will be added dynamically.
+Output to audio device. An output is required in an audio graph. Supports 1-16 channels (default 2).
+Ports will be added dynamically.
 
 - **in-1** : _AudioIn_
 - **in-2** : _AudioIn_
@@ -52,11 +74,13 @@ Output to audio device. An output is required in an audio graph. Supports 1-16 c
 
 ## audio:player
 
-A mono sample player. Supports looping, in/out points, variable speed.
+A stereo sample player. Supports looping, in/out points, variable speed.
 
-Samples are loaded in the background. If using the `sample` port to load new samples, make use of the `ready` and `error` ports to track loading.
+Samples are loaded in the background. If using the `sample` port to load new
+samples, make use of the `ready` and `error` ports to track loading.
 
-The player will not start automatically. To get it to start when the audio root is started, use a `core:start-trigger` attached to the play port.
+The player will not start automatically. To get it to start when the audio root is
+started, use a `core:start-trigger` attached to the play port.
 
 - **out-1 / out-2** : _AudioOut_
 - **sample** : _Property (empty or resource)_ : audio file
@@ -74,7 +98,8 @@ The player will not start automatically. To get it to start when the audio root 
 
 Calculate the level (volume) of the audio buffer using RMS.
 
-The control cycle is always processed before the audio is calculated, therefore the output of this component will always be for the previous audio buffer.
+The control cycle is always processed before the audio is calculated, therefore the
+output of this component will always be for the previous audio buffer.
 
 - **in** : _AudioIn_
 - **out** : _AudioOut_

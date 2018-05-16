@@ -1,6 +1,6 @@
 # Main interface
 
-The image below outlines the default window layout. _Praxis LIVE_ uses a typical MDI interface, whereby components and documents being edited are encompassed within a single main window. It is possible to drag components around the interface or un-dock them into a separate window. Any changes you make will be persisted – if you want to reset to the default layout, use the `Window / Reset Windows` action in the main menu.
+The image below outlines the default window layout. _PraxisLIVE_ uses a typical MDI interface, whereby components and documents being edited are encompassed within a single main window. It is possible to drag components around the interface or un-dock them into a separate window. Any changes you make will be persisted – if you want to reset to the default layout, use the `Window / Reset Windows` action in the main menu.
 
 ![Main window layout](img/window-layout.png)
 
@@ -22,7 +22,7 @@ Six common actions have buttons in the main toolbar.
 
 * **Restart Hub** ![](img/restart24.png)
 
-   Restart the _Praxis LIVE_ hub. All installed root components will be removed - a dialog will be opened giving the option to save any associated files first.
+   Restart the _PraxisLIVE_ hub. All installed root components will be removed - a dialog will be opened giving the option to save any associated files first.
 
 * **Build Project** ![](img/build.png)
 
@@ -34,13 +34,13 @@ Six common actions have buttons in the main toolbar.
 
 ## Projects / File browser
 
-The `Projects` tab provides an interface for opening and managing projects. Projects are shown in a tree-like structure giving access to all the user-editable files that make up a _Praxis LIVE_ project.
+The `Projects` tab provides an interface for opening and managing projects. Projects are shown in a tree-like structure giving access to all the user-editable files that make up a _PraxisLIVE_ project.
 
 The `File browser` tab provides a mechanism for browsing the local file system. It is particularly useful for dragging custom components into an editor.
 
 ## Hub manager
 
-The `Hub Manager` tab provides an overview of the roots running within the _Praxis LIVE_ hub.
+The `Hub Manager` tab provides an overview of the roots running within the _PraxisLIVE_ hub.
 
 The LED icon to the left of the root ID shows whether a root is running or not. Individual roots can be started or stopped by double-clicking.
 
@@ -56,7 +56,7 @@ The `Palette` shows the range of components that may be added to the root file c
 
 ## Search / Help
 
-The primary function of the `Search` box is to allow searching through documentation for all of the various components in the online help. Due to the continuous development of _Praxis LIVE_, individual components are not described here but within the program itself. The help files can also be accessed by pressing `F1`.
+The primary function of the `Search` box is to allow searching through documentation for all of the various components in the online help. Due to the continuous development of _PraxisLIVE_, individual components are not described here but within the program itself. The help files can also be accessed by pressing `F1`.
 
 As well as help files, the Search box also allows searching for actions and settings.
 

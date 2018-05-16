@@ -1,6 +1,7 @@
 # Additional annotations
 
-These additional annotations can be used alongside [primary annotations](annotations.md) to provide additional configuration for a field or method.
+These additional annotations can be used alongside [primary annotations](annotations.md)
+to provide additional configuration for a field or method.
 
 ## @ID
 
@@ -27,9 +28,12 @@ Override the default ID for a port or control.
 }
 ```
 
-Specify a method to run when a property value changes. Especially useful for knowing when a background loading resource is ready. The method should take no arguments and return `void`.
+Specify a method to run when a property value changes. Especially useful for knowing
+when a background loading resource is ready. The method should take no arguments
+and return `void`.
 
-**Inside a video component, the method will be called during the update rather than render cycle - accessing graphics methods will fail.**
+**Inside a video component, the method will be called during the update rather than
+render cycle - accessing graphics methods will fail.**
 
 ### Example
 
@@ -49,9 +53,11 @@ void reconfigure() {
 }
 ```
 
-Specify a method to run when setting a property fails. Especially useful for situations where background loading a resource fails. The method should take no arguments and return `void`.
+Specify a method to run when setting a property fails. Especially useful for situations
+where background loading a resource fails. The method should take no arguments and return `void`.
 
-**Inside a video component, the method will be called during the update rather than render cycle - accessing graphics methods will fail.**
+**Inside a video component, the method will be called during the update rather than
+render cycle - accessing graphics methods will fail.**
 
 ### Example
 
@@ -64,7 +70,7 @@ void imgError() {
 }
 ```
 
-## @Port
+## @Config.Port
 
 ```java
 @interface Port {
@@ -72,7 +78,8 @@ void imgError() {
 }
 ```
 
-Control the creation of a port. Currently only used to suppress the creation of ports for properties and triggers.
+Control the creation of a port. Currently only used to suppress the creation of ports
+for properties and triggers.
 
 ### Examples
 
@@ -92,7 +99,8 @@ Control the creation of a port. Currently only used to suppress the creation of 
 @interface ReadOnly {}
 ```
 
-Specify a property is read only. No port will be created. Attempts to set the property via its control will fail. The variable can still be set in code and read via the control.
+Specify a property is read only. No port will be created. Attempts to set the property
+via its control will fail. The variable can still be set in code and read via the control.
 
 ### Example
 
@@ -106,7 +114,8 @@ Specify a property is read only. No port will be created. Attempts to set the pr
 @interface Transient {}
 ```
 
-Mark a property as transient, meaning the current value will not be saved in the project. Useful for continuously changing values (eg. media position)
+Mark a property as transient, meaning the current value will not be saved in the project.
+Useful for continuously changing values (eg. media position)
 
 ### Example
 
@@ -177,9 +186,12 @@ int count;
 }
 ```
 
-Specify a property is numeric (`double`) with optional range and default value. Ranged numeric properties will show as a slider in the property editor.
+Specify a property is numeric (`double`) with optional range and default value.
+Ranged numeric properties will show as a slider in the property editor.
 
-The `skew` value is used to alter the behaviour of sliders - eg. use a value of `2` or `4` to make the slider more suitable for frequency or volume. Technically the normalised range of the slider (0..1) is raised to the power of skew.
+The `skew` value is used to alter the behaviour of sliders - eg. use a value of `2` or `4`
+to make the slider more suitable for frequency or volume. Technically the normalised
+range of the slider (0..1) is raised to the power of skew.
 
 ### Examples
 
@@ -203,11 +215,15 @@ The `skew` value is used to alter the behaviour of sliders - eg. use a value of 
 }
 ```
 
-Specify a property is a string, with optional default value. The emptyIsDefault parameter will cause the word `default` to show in the editor when the value is an empty string.
+Specify a property is a string, with optional default value. The `emptyIsDefault`
+parameter will cause the word `default` to show in the editor when the value is an
+empty string.
 
-If the allowed array is not empty, the property will act like an enumeration, providing a select box in the editor.
+If the allowed array is not empty, the property will act like an enumeration, providing
+a select box in the editor.
 
-The mime type may be set to control editing / syntax highlighting, and the template may be used to specify text to use in the editor when the value is empty.
+The mime type may be set to control editing / syntax highlighting, and the template
+may be used to specify text to use in the editor when the value is empty.
 
 ### Examples
 
@@ -220,5 +236,3 @@ String blendMode;
 @P(1) @Type.String(mime = GLSL_FRAGMENT_MIME, template = DEFAULT_FRAGMENT_SHADER)
 String fragment;
 ```
-
-
