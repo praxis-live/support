@@ -1,19 +1,18 @@
 /* Force width: auto on mobile images */
+@import url('https://fonts.googleapis.com/css?family=Exo+2:300');
 
-img {
-    width: auto !important;
+body {
+  background-color: #efefef;
 }
 
-/* Suppress first heading in the ToC */
-
-li.toctree-l3:first-child {
-    display: none;
+.md-header, [data-md-color-accent=indigo] .md-header {
+  background-color: #000;
 }
 
-a code {
-    text-decoration: underline;
+h1, h2, .md-header-nav__title {
+  font-family: 'Exo 2', 'Roboto', sans-serif;
 }
 
-a:hover code {
-    text-decoration: none;
+.md-header-nav__title {
+  font-size: 2em;
 }

@@ -1,6 +1,6 @@
-site_name: Praxis LIVE documentation
+site_name: PraxisLIVE documentation
 pages:
-  - 'index.md'
+  - 'PraxisLIVE': 'index.md'
   - 'Getting started':
     - 'Installation': 'installation.md'
     - 'Example projects': 'examples.md'
@@ -34,16 +34,30 @@ pages:
     - 'Distributed hubs': 'distributed-hubs.md'
     - 'Terminal': 'terminal.md'
 
-theme: readthedocs
-
+theme:
+  name: 'material'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  logo: 'img/praxislive-icon.png'
+  favicon: 'img/favicon.ico'
+  
 site_author: ""
-
-repo_url: https://github.com/praxis-live/support
-
-include_search: true
 
 extra_css:
     - custom.css
 
-#use_directory_urls: false
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/praxis-live'
+    - type: 'twitter'
+      link: 'https://twitter.com/praxislive'
+
+markdown_extensions:
+  - admonition
+  - codehilite
+
+#repo_url: https://github.com/praxis-live/support
+
 

@@ -1,5 +1,3 @@
-![PraxisLIVE logo](img/praxislive.png)
-
 PraxisLIVE is a hybrid visual IDE for live creative coding.
 
 _easily create projections, interactive spaces, custom VJ tools, sonic performance instruments, media for theatre; use it as a live digital sketchbook, test out ideas, experiment with code_
