@@ -1,5 +1,5 @@
 site_name: PraxisLIVE documentation
-pages:
+nav:
   - 'PraxisLIVE': 'index.md'
   - 'Getting started':
     - 'Installation': 'installation.md'
@@ -49,9 +49,9 @@ extra_css:
 
 extra:
   social:
-    - type: 'github'
+    - icon: 'fontawesome/brands/github'
       link: 'https://github.com/praxis-live'
-    - type: 'twitter'
+    - icon: 'fontawesome/brands/twitter'
       link: 'https://twitter.com/praxislive'
 
 markdown_extensions:
