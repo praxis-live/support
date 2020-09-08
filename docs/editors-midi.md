@@ -1,7 +1,7 @@
 # MIDI bindings editor
 
 MIDI `.pxr` files will open in the MIDI bindings editor. This is a simple editor
-that allows you to connect MIDI controllers to any _PraxisLIVE_ control.
+that allows you to connect MIDI controllers to any _PraxisCORE_ control.
 
 To **add a binding**, use the `Add` button in the editor toolbar.
 

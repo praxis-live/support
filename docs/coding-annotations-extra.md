@@ -1,6 +1,6 @@
 # Additional annotations
 
-These additional annotations can be used alongside [primary annotations](annotations.md)
+These additional annotations can be used alongside [primary annotations](coding-annotations.md)
 to provide additional configuration for a field or method.
 
 ## @ID
@@ -32,9 +32,6 @@ Specify a method to run when a property value changes. Especially useful for kno
 when a background loading resource is ready. The method should take no arguments
 and return `void`.
 
-**Inside a video component, the method will be called during the update rather than
-render cycle - accessing graphics methods will fail.**
-
 ### Example
 
 ```java
@@ -55,9 +52,6 @@ void reconfigure() {
 
 Specify a method to run when setting a property fails. Especially useful for situations
 where background loading a resource fails. The method should take no arguments and return `void`.
-
-**Inside a video component, the method will be called during the update rather than
-render cycle - accessing graphics methods will fail.**
 
 ### Example
 
@@ -84,11 +78,11 @@ for properties and triggers.
 ### Examples
 
 ```java
-@P(1) @Port(false) PImage img;
+@P(1) @Config.Port(false) PImage img;
 ```
 
 ```java
-@T(1) @Port(false) void reset() {
+@T(1) @Config.Port(false) void reset() {
   // reset stuff
 }
 ```
@@ -100,7 +94,7 @@ for properties and triggers.
 ```
 
 Specify a property is read only. No port will be created. Attempts to set the property
-via its control will fail. The variable can still be set in code and read via the control.
+via its control will fail. The _field can still be set in code_ and read via the control.
 
 ### Example
 
@@ -128,16 +122,19 @@ double position;
 
 ```java
 @interface Type {
-  Class<? extends Argument> cls() default Argument.class;
+  Class<? extends Value> value() default Value.class;
+  String[] properties() default {};
+  String def() default "";
 }
 ```
 
-Specify a property as any subclass of Argument.
+Specify a property as any sub-type of Value. Arbitrary info properties can also be
+provided, and the default value as its String representation.
 
 ### Example
 
 ```java
-@P(4) @Type(cls = ControlAddress.class) Property to;
+@P(4) @Type(ControlAddress.class) Property to;
 ```
 
 ## @Type.Boolean
@@ -163,10 +160,12 @@ Specify a property is a boolean, with optional default value.
   int min() default PNumber.MIN_VALUE;
   int max() default PNumber.MAX_VALUE;
   int def() default 0;
+  int[] suggested() default {};
 }
 ```
 
-Specify a property is an integer with optional range and default value.
+Specify a property is an integer with optional range and default value. An array of
+suggested values can be provided, providing a select box in the editor.
 
 ### Example
 

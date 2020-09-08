@@ -1,6 +1,6 @@
 # GUI (control panel) editor
 
-![GUI editor](img/gui.png)
+![GUI editor](img/gui-editor.png)
 
 When you open a GUI / control panel `.pxr` file it will open in the GUI editor.
 If the GUI was open (running), the external window will be closed and the panel

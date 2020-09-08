@@ -8,11 +8,13 @@ Component that can contain other components. Use `core|audio|video:container:in|
 
 ## core:custom
 
-Base for core (not audio, video, etc.) components. No ports or controls by default. See [coding guide](coding.md).
+Base for core (not audio, video, etc.) components. No ports or controls by default. See
+[coding guide](coding.md).
 
 ## core:property
 
-Stores a property, and sends it from its output port whenever a new value is received. Also sends its value when the root container starts (eg. audio starts playing).
+Stores a property, and sends it from its output port whenever a new value is received. Also
+sends its value when the root container starts (eg. window opens).
 
 - **out** : _ControlOut_
 - **value** : _Property_ : set / get value.
@@ -25,9 +27,11 @@ Output a signal (empty value) when the root container starts.
 
 ## core:tracker
 
-Tracker sequencing component, supporting 8 channels and multiple patterns. The `trigger` port would normally be connected to a `core:timing:timer` or `audio:clock` component.
+Tracker sequencing component, supporting 8 channels and multiple patterns. The `trigger`
+port would normally be connected to a `core:timing:timer` or `audio:clock` component.
 
-Use `Edit patterns` from the component popup menu to open the pattern table editor. Use `Save (CTRL-S)` to update the component.
+Use `Edit patterns` from the component popup menu to open the pattern table editor.
+Use `Save (CTRL-S)` to update the component.
 
 - **out-N** : _ControlOut_ : output for N channel
 - **patterns** : _Property_ : pattern data
@@ -38,7 +42,8 @@ Use `Edit patterns` from the component popup menu to open the pattern table edit
 
 ## core:variable
 
-Stores a value and sends it whenever triggered. Unlike `core:property` it does not automatically send on each update.
+Stores a value and sends it whenever triggered. Unlike `core:property` it does not automatically
+send on each update.
 
 - **out** : _ControlOut_
 - **value** : _Property_ : set / get value.
@@ -46,7 +51,9 @@ Stores a value and sends it whenever triggered. Unlike `core:property` it does n
 
 ## core:array:iterator
 
-Loops through an array of arguments, jumping to the next each time it is triggered. Can be set to jump a (random) number of elements ahead, determined by `min-skip` and `max-skip`. Can loop continuously forwards, or ping-pong back and forth through the array.
+Loops through an array of arguments, jumping to the next each time it is triggered. Can be set to
+jump a (random) number of elements ahead, determined by `min-skip` and `max-skip`. Can loop
+continuously forwards, or ping-pong back and forth through the array.
 
 If the array is empty, an empty string will be sent instead.
 
@@ -70,14 +77,6 @@ If the array is empty, an empty string will be sent instead.
 - **out** : _ControlOut_
 - **values** : _Property (array)_ : set / get values array.
 - **trigger** : _Action_ : trigger random output.
-
-## core:container:in
-
-Adds a control input port to the parent container.
-
-## core:container:out
-
-Adds a control output port to the parent container.
 
 ## core:math:add
 

@@ -93,10 +93,10 @@ inputs and sources may be added later.
 ### fn()
 
 ```java
-OpGen fn(DoubleUnaryOperator function)
+Fn fn(DoubleUnaryOperator function)
 ```
 
-Shortcut for creating an OpGen with provided function inside a pipeline. The
+Shortcut for creating a Fn with provided function inside a pipeline. The
 returned UGen supports a single input and output (input is optional).
 
 eg. assuming a phase input from 0..1, a simple sin oscillator function would be
@@ -175,11 +175,11 @@ public void setup() {
 
 ## Loading samples
 
-Use the [`@P`](annotations.md#p) annotation on a field of type `AudioTable` to
+Use the [`@P`](coding-annotations.md#p) annotation on a field of type `AudioTable` to
 support loading of samples from a file. Loading is done asynchronously.
 
 The field value may be `null` - UGens will handle this, but be careful in your
-own code. Use the [`@OnChange`](annotations-additional.md#onchange) annotation to
+own code. Use the [`@OnChange`](coding-annotations-extra.md#onchange) annotation to
 update UGens with a new table -
 
 ```java
@@ -198,7 +198,7 @@ void updateSample() {
 
 ## Additional variables and functions
 
-In addition to the core Processing API functions, a range of specific audio-related
+In addition to the core API functions, a range of specific audio-related
 functions and variables are available to your code.
 
 ### Samplerate and block size
@@ -271,6 +271,18 @@ delay.time(double s); // delay time in seconds (0..2), default 0
 delay.feedback(double f); // feedback (0, none - 1, 100%), default 0
 delay.level(double l); // level of delay (0, none - 1, 100%), default 1
 delay.passthrough(boolean p); // whether to add input signal, default false
+```
+
+### Fn (function holder)
+
+A mono UGen that allows a per-sample function to be applied. One (optional) input, one output.
+
+The preferred usage of Fn is via `fn()` as described in the routing section.
+
+```java
+@UGen Fn op;
+
+op.function(d -> d); // default is passthrough Function as shown.
 ```
 
 ### Freeverb
@@ -366,18 +378,6 @@ looper.play(); // start playing
 looper.stop(); // stop playing
 ```
 
-### OpGen (function holder)
-
-A mono UGen that allows a per-sample function to be applied. One (optional) input, one output.
-
-The preferred usage of OpGen is via `fn()` as described in the routing section.
-
-```java
-@UGen OpGen op;
-
-op.function(d -> d); // default is passthrough Function as shown.
-```
-
 ### Oscillator (Osc)
 
 An oscillator with various waveforms (Sine, Square and Saw). The waveforms are bandlimited
@@ -401,6 +401,19 @@ A simple mono overdrive effect. One input, one output.
 od.drive(double amt); // drive (0..1), default 0
 ```
 
+### Phasor
+
+Similar to a sawtooth LFO, but with controllable range (including reverse).
+
+```java
+@UGen Phasor phasor;
+
+phasor.frequency(double hz); // frequency in Hz, default 1
+phasor.minimum(double min); // minimum value of range, default 0
+phasor.maximum(double max); // maximum value of range, default 1
+phasor.phase(double ph); // phase position between 0 and 1
+```
+
 ### Player
 
 A multi-channel sample table player. This UGen currently supports up to 16 outputs.
@@ -421,17 +434,4 @@ player.looping(boolean lp); // loop playback, default false
 
 player.play(); // start playing
 player.stop(); // stop playing
-```
-
-### Phasor
-
-Similar to a sawtooth LFO, but with controllable range (including reverse).
-
-```java
-@UGen Phasor phasor;
-
-phasor.frequency(double hz); // frequency in Hz, default 1
-phasor.minimum(double min); // minimum value of range, default 0
-phasor.maximum(double max); // maximum value of range, default 1
-phasor.phase(double ph); // phase position between 0 and 1
 ```

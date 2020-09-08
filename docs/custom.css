@@ -1,5 +1,4 @@
-/* Force width: auto on mobile images */
-@import url('https://fonts.googleapis.com/css?family=Exo+2:300');
+@import url('https://fonts.googleapis.com/css?family=Exo:300');
 
 body {
   background-color: #efefef;
@@ -10,7 +9,7 @@ body {
 }
 
 h1, h2, .md-header-nav__title {
-  font-family: 'Exo 2', 'Roboto', sans-serif;
+  font-family: 'Exo', 'Roboto', sans-serif;
 }
 
 .md-header-nav__title {

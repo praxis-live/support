@@ -105,18 +105,6 @@ output of this component will always be for the previous audio buffer.
 - **out** : _AudioOut_
 - **level** : _ControlOut_
 
-## audio:container:in
-
-Audio input for use inside a `core:container`
-
-- **out** : _AudioOut_
-
-## audio:container:out
-
-Audio output for use inside a `core:container`
-
-- **in** : _AudioIn_
-
 ## audio:fx:chorus
 
 A chorus component.
@@ -202,19 +190,4 @@ Currently limited to linear fading.
 - **in-2** : _AudioIn_
 - **out** : _AudioOut_
 - **mix** : _Property (number 0..1)_
-
-## audio:sampling:looper
-
-A mono phrase sampler. Supports in/out points, variable speed.
-
-- **in** : _AudioIn_
-- **out** : _AudioOut_
-- **position** : _Property (number 0..1, transient)_ : normalized playback position
-- **start** : _Property (number 0..1)_ : start point for playback / looping
-- **end** : _Property (number 0..1)_ : end point for playback / looping
-- **speed** : _Property (number -4..4)_ : playback speed (supports reverse play)
-- **loop** : _Property (boolean)_ : loop playback
-- **play** : _Action_ : start playback
-- **stop** : _Action_ : stop playback
-- **record** : _Action_ : start recording
 

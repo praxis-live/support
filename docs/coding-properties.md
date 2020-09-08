@@ -1,25 +1,28 @@
 # Properties & animation
 
-The `Property` class is used for creating property controls on components. It can be used directly as a field type, and is also the underlying mechanism for `int`, `double`, `String` and `boolean` fields. Properties can be created using the [`@P`](annotations.md#p) or `@Inject` annotations.
+The `Property` class is used for creating property controls on components. It can be used
+directly as a field type, and is also the underlying mechanism for other field types such as
+`int`, `double`, `String` and `boolean`. Properties can be created using the
+[`@P`](coding-annotations.md#p) or  [`@Inject`](coding-annotations.md#inject) annotations.
 
-Properties have some important extra features. Values are automatically saved (unless specified) as part of the project state. Properties with the same name maintain their value across code changes, unlike ordinary fields. They also support animation with multiple keyframes and easing modes. Animations also maintain their state across code changes. 
+Properties have some important extra features. Values are automatically saved (unless specified)
+as part of the component state. Properties with the same name maintain their value across code 
+changes, unlike ordinary fields. 
 
-[Additional annotations](annotations-additional.md) can be used to provide additional information about a property. This can include its type, range, allowed values, default value, etc. There are also annotations to mark a property as read-only or transient (value not saved), to control whether a port is created, or to call a method when the value changes.
+[Additional annotations](coding-annotations-extra.md) can be used to provide additional
+information about a property. This can include its type, range, allowed values, default value, etc.
+There are also annotations to mark a property as read-only or transient (value not saved),
+to control whether a port is created, or to call a method when the value changes.
 
-It is possible to get access to a `Property` object for a primitive or `String` field using the `p()` function. You must use the external form of the ID though, as seen in the visual editor. eg. -
-
-```java
-@P(1) int screenWidth;
-Property screenWidthProperty;
-
-public void setup() {
-  screenWidthProperty = p("screen-width");
-}
-```
+Used as the field type `Property` also supports animation with multiple keyframes and easing
+modes. Animations also maintain their state across code changes. The `Property` class
+also supports [Linkables](coding-linkables.md) for reacting and linking changing values.
 
 ## Reading and writing values
 
-The `Property` object itself supports various methods for setting and retrieving the value. Methods that set the value return the `Property` for efficient method chaining. Get methods provide an optional default to return if the value cannot be coerced to the required type.
+The `Property` object itself supports various methods for setting and retrieving the value.
+Methods that set the value return the `Property` for efficient method chaining. Get methods
+provide an optional default to return if the value cannot be coerced to the required type.
 
 ```java
 Property set(Argument value);
@@ -43,11 +46,14 @@ double d = d(prop); // shorthand for prop.getDouble()
 float f = f(prop); // shorthand for (float) prop.getDouble()
 int i = i(prop); // shorthand for prop.getInt()
 String s = s(prop); // shorthand for prop.get().toString()
+boolean b = b(prop); // shorthand for prop.getBoolean()
 ```
 
 ## Animation
 
-`Property` supports animation through a `Property.Animator` object, with multiple keyframe and a variety of easing modes available. Animations will continue running even when code is changed - use the `isAnimating()` method to only start an animation if one is not already running.
+`Property` supports animation through a `Property.Animator` object, with multiple keyframes
+ and a variety of easing modes available. Animations will continue running even when code is
+changed - use the `isAnimating()` to only start an animation if one is not already running.
 
 ### Methods on Property
 
@@ -57,11 +63,14 @@ boolean isAnimating();
 Property.Animator to(double ... values);
 ```
 
-Property.Animator objects are created lazily when required. `isAnimating()` is equivalent to `animator != null && animator().isAnimating()` which is both easier to write and may be more efficient.
+Property.Animator objects are created lazily when required. `isAnimating()` is equivalent
+to `animator != null && animator().isAnimating()` so will not create an animator unless
+required.
 
 The `to()` method is a shorthand for calling `animator().to()`.
 
-**Note that calling `set()` will stop any animation.**
+!!! note
+    Calling `set(...)` will stop any animation.
 
 ### Methods on Property.Animator
 
@@ -72,6 +81,8 @@ Property.Animator to(double ... values);
 Property.Animator in(double ... seconds);
 Property.Animator easing(Easing ... easings);
 Property.Animator stop();
+
+Property.Animator whenDone(Consumer<Property> action);
 
 Property.Animator linear(); // shorthand for easing(Easing.linear)
 Property.Animator ease(); shorthand for easing(Easing.ease)
@@ -85,7 +96,13 @@ The number of keyframes is defined by the number of values given to `to()`. You 
  - animate from current value to 1 in 5 seconds
  - animate from 1 to 0 in 2.5 seconds
  - animate from 0 to 0.5 in 5 seconds
- 
+
+The `whenDone(...)` method will run an action whenever animation is complete,
+and also run the action if not currently animating. It's main use is creating continuous
+animations. Restarting the animation within a `whenDone` handler will cause the
+property to remove any overrun of time from the first keyframe for accurate time handling.
+
+
 
 ### Easing modes
 
@@ -122,7 +139,8 @@ public final static Easing quintInOut = new SplineEasing(0.9,0,0.1,1);
 
 ### Examples
 
-This simple example creates a property that counts seconds. It will continue running through code changes, and restart after 24 hours.
+This simple example creates a property that counts seconds. It will continue running
+through code changes, and restart after 24 hours.
 
 ```java
 @P(1) Property seconds;
@@ -148,3 +166,13 @@ public void draw() {
 }
 ```
 
+To continuously animate to a random value every 5 seconds using `whenDone`.
+
+```java
+
+@Inject Property x;
+
+public void init() {
+  x.animator().whenDone(p -> p.to(random(0, 1).in(5).easeInOut());
+}
+```
