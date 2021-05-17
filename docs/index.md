@@ -63,7 +63,7 @@ architecture. Option to run projects transparently across processes or machines.
 * [Coding video components](coding-video.md)
 * [Coding OpenGL video components](coding-video-gl.md)
 * [Coding Tinkerforge components](coding-tinkerforge.md)
-* [Properties & animation](properties.md)
+* [Properties & animation](coding-properties.md)
 * [Annotations](coding-annotations.md)
 * [Additional annotations](coding-annotations-extra.md)
 * [Linkables](coding-linkables.md)
