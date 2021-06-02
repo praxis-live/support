@@ -28,6 +28,8 @@ nav:
     - 'Linkables': 'coding-linkables.md'
     - 'References': 'coding-ref.md'
     - 'Data Pipes': 'coding-data-pipes.md'
+    - 'Shared code': 'coding-shared.md'
+    - 'Third-party libraries': 'coding-libraries.md'
   - 'Built-in components':
     - 'Core components': 'components-core.md'
     - 'Audio components': 'components-audio.md'

@@ -69,6 +69,8 @@ architecture. Option to run projects transparently across processes or machines.
 * [Linkables](coding-linkables.md)
 * [References](coding-ref.md)
 * [Data Pipes](coding-data-pipes.md)
+* [Shared code](coding-shared.md)
+* [Third-party libraries](coding-libraries.md)
 
 <h3>Built-in components</h3>
 
