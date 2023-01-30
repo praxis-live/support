@@ -41,8 +41,18 @@ nav:
 theme:
   name: 'material'
   palette:
-    primary: 'indigo'
-    accent: 'indigo'
+    - scheme: default
+      primary: 'indigo'
+      accent: 'indigo'
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: 'blue grey'
+      accent: 'blue'
+      toggle:
+        icon: material/brightness-3
+        name: Switch to light mode
   logo: 'img/praxislive-icon.png'
   favicon: 'img/favicon.ico'
   
@@ -60,7 +70,11 @@ extra:
 
 markdown_extensions:
   - admonition
-  - codehilite
+  - pymdownx.highlight:
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 #repo_url: https://github.com/praxis-live/support
 

@@ -1,17 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:300');
 
-body {
-  background-color: #efefef;
+body[data-md-color-scheme="default"] {
+  background-color: rgb(239, 239, 239);
 }
 
-.md-header, [data-md-color-accent=indigo] .md-header {
-  background-color: #000;
+body[data-md-color-scheme="slate"] {
+  background-color: rgb(34, 36, 46);
 }
 
-h1, h2, .md-header-nav__title {
+.md-header {
+  background-color: #111;
+}
+
+h1, h2, .md-nav__title {
   font-family: 'Exo', 'Roboto', sans-serif;
 }
 
-.md-header-nav__title {
-  font-size: 2em;
+.md-nav__title {
+  font-size: 1.2em;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.md-header__topic:first-child {
+  font-weight: normal;
 }
