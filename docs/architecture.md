@@ -13,8 +13,8 @@ follows a familiar slash-separated syntax (eg. `/data/filelistener`). The first 
 type of component called a **Root**. Roots generally provide the overall context and scheduling for their child
 components.
 
-There are currently 7 types of root available within a standard _PraxisLIVE_ install - a generic (data) root, and
-specialist roots for video (OpenGL visualization), audio (DSP), GUI, OSC, MIDI and TinkerForge hardware. While you
+There are currently 5 types of root available within a standard _PraxisLIVE_ install - generic and data-focused
+recodeable roots, as well as specialist roots for video (OpenGL visualization), audio (DSP), and GUI. While you
 might commonly have one of each type you require, it is possible to have as many roots of as many types as your
 system(s) can handle.
 
@@ -49,8 +49,7 @@ Above you can see an example of a `video:capture` component in the editor. Ports
 and controls within the component editor window – note that many controls will have a corresponding port.
 
 When you manipulate values within the dialog, you are sending messages to controls on the component. There are
-three different types of controls – actions, properties and functions. Actions (buttons) and properties can be
-seen in the table. Functions are not fully reflected within the editor, and are primarily used internally.
+three different types of controls – actions, properties and functions.
 
 The `ready` and `error` output ports reflect the fact that some things may happen asynchronously, or may fail. A
 robust project will normally use these signals to trigger suitable actions in either case.

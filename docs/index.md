@@ -50,8 +50,6 @@ architecture. Option to run projects transparently across processes or machines.
 * [Editors](editors.md)
 * [Graph editor](editors-graph.md)
 * [GUI control panel editor](editors-gui.md)
-* [MIDI bindings editor](editors-midi.md)
-* [OSC bindings editor](editors-osc.md)
 * [Component editors](component-editors.md)
 * [Custom components](custom-components.md)
 
@@ -62,7 +60,6 @@ architecture. Option to run projects transparently across processes or machines.
 * [Coding audio components](coding-audio.md)
 * [Coding video components](coding-video.md)
 * [Coding OpenGL video components](coding-video-gl.md)
-* [Coding Tinkerforge components](coding-tinkerforge.md)
 * [Properties & animation](coding-properties.md)
 * [Annotations](coding-annotations.md)
 * [Additional annotations](coding-annotations-extra.md)

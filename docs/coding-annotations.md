@@ -16,13 +16,13 @@ Fields should not be set when declared - values will be injected automatically.
 ```
 
 Mark a field or method as an input. An input port will be created on the component.
-The value specifies the index of the port relative to other input ports - all input
-ports must have a unique index.
+The optional weight value controls the position of the port relative to other input
+ports.
 
-Supported on fields of type `Input`, `Data.In`, `AudioIn` and `PImage`.
+Supported on fields of type `Input`, `Data.In`, `AudioIn`, `PImage` and `Ref.Input<T>`.
 
 Supported on void methods taking a single argument of type `double`, `int`, `String`
-or `Value`.
+or a `Value` subclass.
 
 The `Input` class supports reacting to input using [Linkables](coding-linkables.md).
 
@@ -48,14 +48,14 @@ The `Input` class supports reacting to input using [Linkables](coding-linkables.
 }
 ```
 
-Mark a field as an output. An output port will be created on the component. The value
-specifies the index of the port relative to other output ports - all output ports must
-have a unique index.
+Mark a field as an output. An output port will be created on the component. The
+optional weight value controls the position of the port relative to other output
+ports.
 
-Supported on fields of type `Output`, `Data.Out` and `AudioOut`.
+Supported on fields of type `Output`, `Data.Out`, `AudioOut` and `Ref<T>`.
 
 The `Output` class supports methods for sending various types, including `double`,
-`String` and `Value`, as well as an empty message.
+`String` and `Value` subclasses, as well as an empty message.
 
 ### Examples
 
@@ -88,8 +88,8 @@ void update() {
 ```
 
 Mark a field as a property. A control will be added to the component, and (by default)
-an input port. The value specifies the index of the property relative to other properties -
-all properties must have a unique index.
+an input port. The optional weight value controls the position of the property relative
+to other properties.
 
 Supported on core fields of type `Property`, `boolean`, `double`, `int`, `String`,
 all `Value` types and `Optional` of all value types.
@@ -123,41 +123,6 @@ void draw() {
 void draw() {
   if (img != null) {
     image(img, 50, 50);
-  }
-}
-```
-
-## @Inject
-
-```java
-@interface Inject
-```
-
-Supported on the same core fields as `@P` and acts as a hidden property, particularly useful
-for animation. Hidden properties do not show up in the editor and their state is not saved as
-part of the project. However, unlike normal fields they maintain state across code changes.
-
-!!! warning
-    Use hidden properties with care, and generally only for transient values, remembering
-    that a default value will be injected when the project is next run.
-
-`@Inject` is also used for [`Ref`](coding-ref.md) and [`Data.Sink`](coding-data-pipes.md).
-
-Because no port or control is created, no index is required - multiple fields of the same
-type may be declared together.
-
-### Examples
-
-```java
-@Inject double x, y;
-```
-
-```java
-@Inject Property timer;
-
-void update() {
-  if (!timer.isAnimating()) {
-    timer.set(0).to(60).in(60);
   }
 }
 ```
@@ -203,6 +168,21 @@ void draw() {
 }
 ```
 
+## @FN
+
+Annotate a method as a custom function control. Supports arguments and return values of
+any `Value` subtype, as well as `String`, `boolean`, `int`, `float` and `double`.
+
+### Examples
+
+```java
+@P @Type.String(def = "Hello") String greeting;
+
+@FN String greet(String name) {
+    return greeting + " " + name;
+}
+```
+
 ## @AuxIn
 
 ```java
@@ -224,6 +204,57 @@ that ports appear after input, output, property and trigger ports.
 
 Mark a field or method as an auxillary output. Works almost identically to `@Out` except
 that ports appear after input, output, property, trigger and auxillary input ports.
+
+## @Inject
+
+```java
+@interface Inject
+```
+
+Supported on the same core fields as `@P` and acts as a hidden property. If used on `Property`
+is useful for animation. Hidden properties do not show up in the editor and their state is not
+saved as part of the project. However, unlike normal fields they maintain state across code
+changes.
+
+`@Inject` is used for [`Ref<T>`](coding-ref.md) and [`Data.Sink`](coding-data-pipes.md)
+fields.
+
+`@Inject` can also be used with fields of other types via [`Ref.Provider`](coding-ref.md).
+The default provider supports injecting fields of type `List`, `Set` and `Map`. A custom
+provider can be specified using the `provider` value on the annotation.
+
+### Examples
+
+```java
+@Inject double x, y;
+```
+
+```java
+@Inject Property timer;
+
+void update() {
+  if (!timer.isAnimating()) {
+    timer.set(0).to(60).in(60);
+  }
+}
+```
+
+## @Persist
+
+Mark a field to be persisted across code changes. Should be used with care. Unlike injected
+fields, persistent fields are not automatically set. Can be used for any type.
+
+Persistent fields are reset to default values (eg. `0` or `null`) when the root is restarted,
+unless the `autoReset` value of the annotation is set to `false`. Like `Ref` values, any
+`AutoCloseable` values will be closed when removed or reset unless the `autoClose` value of
+the annotation is set to `false`.
+
+### Examples
+
+```java
+@Persist int counter;
+@Persist(autoReset = false) Future<String> result;
+```
 
 ## @OffScreen
 

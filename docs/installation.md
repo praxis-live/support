@@ -10,14 +10,14 @@ Platform-specific packages are available for Windows, OS X and Linux. There is a
 
 ## System requirements
 
-PraxisLIVE packages for Windows, Linux and macOS include their own copy of OpenJDK 11.
-Those using the plain zip download need to ensure they run with a Java 11 or higher JDK.
+PraxisLIVE packages for Windows, Linux and macOS include their own copy of OpenJDK.
+Those using the plain zip download need to ensure they run with a Java 21 or higher JDK.
 
 GStreamer 1.x is required for video capture and playback. The GStreamer libraries are not included in the
 PraxisLIVE downloads to reduce their size and ensure you can always use the GStreamer version you want.
 
-Latest recommended download links for GStreamer on Windows and macOS are on the Start Page in the application. Or
-see [https://gstreamer.freedesktop.org/download/](https://gstreamer.freedesktop.org/download/)
+<!-- Latest recommended download links for GStreamer on Windows and macOS are on the Start Page in the application. Or
+see [https://gstreamer.freedesktop.org/download/](https://gstreamer.freedesktop.org/download/) -->
 
 ## Windows
 
@@ -29,9 +29,7 @@ rather than typical, if you want to use webcams or other capture devices.
 
 ## Linux
 
-_PraxisLIVE_ is available as a Linux AppImage. Simply download the file, make it
-executable, and run it. See the [AppImage website](https://appimage.org/) website for
-more details and optional system integration utilities.
+_PraxisLIVE_ is available as a Linux DEB package.
 
 In the unlikely event you don't have GStreamer 1.x installed and require video playback and capture, 
 install it from your distribution's repositories.
@@ -39,10 +37,6 @@ install it from your distribution's repositories.
 ## macOS
 
 _PraxisLIVE_ is available as a macOS Application Bundle. Simply download and extract the bundle from the archive.
-
-!!! info
-    You may need to right-click and open the application, or otherwise adjust Gatekeeper settings, to get the
-    application to run on first launch.
 
 For video playback and capture, install the GStreamer library.
 
@@ -52,5 +46,5 @@ A cross-platform Zip bundle is also available. This can be used if you cannot or
 _PraxisLIVE_ on your system, or wish to use the application with an alternative JDK.
 
 To use the Zip bundle, unzip the archive to a suitable location, then run `praxislive` (Linux / macOS) or
-`praxislive.exe` (Windows) from inside the `bin` directory. Make sure you have a Java 11+ JDK
+`praxislive.exe` (Windows) from inside the `bin` directory. Make sure you have a Java 21+ JDK
 installed and set as the default.

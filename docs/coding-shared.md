@@ -37,6 +37,6 @@ import static SHARED.Utils.*;
 
 You can `CTRL-click` any shared code type or method to open it in the editor.
 
-!!! info
+!!! important
     Just like with normal component code, saving the code updates the components
     in memory - make sure to save the graph or project to disk!

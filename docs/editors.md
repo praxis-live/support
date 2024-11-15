@@ -23,5 +23,3 @@ _PraxisLIVE_ does not attempt to track all changes so will always prompt you to 
 
 * [Graph editor](editors-graph.md) (default)
 * [GUI control panel editor](editors-gui.md)
-* [MIDI bindings editor](editors-midi.md)
-* [OSC bindings editor](editors-osc.md)

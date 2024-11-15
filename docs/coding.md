@@ -22,14 +22,15 @@ build on the functionality of `core:custom`.
 
  - `core:custom` : Base type for components that work with control signals inside any
 graph type. See [Coding control components](coding-core.md)
+ - `data:custom` : Base type for components that work with control signals inside a
+data root. This base type should be used for components that are not real-time safe and
+so should not be added to other graph types. See [Coding control components](coding-core.md)
  - `audio:custom` : Base type for audio components. See [Coding audio components](coding-audio.md)
  - `video:custom` : Base type for simple video components. See [Coding video components](coding-video.md)
  - `video:gl:p2d` : Video base type providing almost complete access to the Processing 2D API.
 Only supported in the OpenGL renderer. See [Coding OpenGL video components](coding-video-gl.md)
  - `video:gl:p3d` : Video base type providing almost complete access to the Processing 3D API.
 Only supported in the OpenGL renderer. See [Coding OpenGL video components](coding-video-gl.md)
- - `tinkerforge:custom` : Base type for components interfacing with [TinkerForge](http://www.tinkerforge.com)
-sensors and electronics. See [Coding TinkerForge components](coding-tinkerforge.md)
 
 ## Core syntax and functionality
 

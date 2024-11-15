@@ -57,6 +57,6 @@ tab will only show up when a relevant file is open for editing.
 
 ## Options / Settings
 
-The `Options` window can be opened through the `Tools` menu in the main menu bar. It provides the ability to set
-common global preferences such as update checking, keyboard shortcuts, GStreamer location, etc.
+The `Options` window can be opened through the `Tools` menu in the main menu bar (or the app menu on macOS). It
+provides the ability to set common global preferences such as update checking, keyboard shortcuts, GStreamer location, etc.
 

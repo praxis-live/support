@@ -2,15 +2,15 @@
 
 ![Graph editor](img/graph.png)
 
-The default editor is the graph editor, used for audio, video, tinkerforge, and generic data pipelines. Components
+The default editor is the graph editor, used for audio, video, and (by default) generic roots. Components
 and port connections are represented in a graphical node form that should be familiar to anyone who has used other
 visual dataflow environments.
 
 ## Creating and connecting components
 
 To **add components**, drag the component type you want from the `Palette` window onto the editor, or use the pop-up
-menu browser. Components are automatically filtered depending on the root type. You will be asked to name the
-component (a unique name will be suggested) – _names cannot be changed once the component is created_.
+menu browser. Components are automatically filtered depending on the container. You will be asked to name the
+component (a unique name will be suggested) – _the name cannot be changed once the component is created_.
 
 To **connect ports**, click and drag with the mouse between the two ports. You cannot connect ports of incompatible
 types, and output ports can only be connected to input ports. Connections are colour-coded depending on type.
@@ -58,8 +58,6 @@ and making/breaking connections. Actions appear in a bar at the bottom of the gr
 triggered by keys based on the syntax of the Praxis Command Language used in the terminal and in project
 files. Fields have an auto-complete list (trigger by typing or down-arrow), and most support glob syntax
 for multiple selection. `TAB` between fields, use `RETURN` to action, or `ESC` to close the action.
-
-
 
 - `@` - Add a new component. Suggest field of components from palette. Components currently appear
 in the same location - use arrow keys to move.

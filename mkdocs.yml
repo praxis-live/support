@@ -1,6 +1,6 @@
-site_name: PraxisLIVE v5 documentation
+site_name: PraxisLIVE documentation
 nav:
-  - 'PraxisLIVE v5': 'index.md'
+  - 'PraxisLIVE': 'index.md'
   - 'Getting started':
     - 'Installation': 'installation.md'
     - 'Example projects': 'examples.md'
@@ -11,8 +11,6 @@ nav:
     - 'Editors': 'editors.md'
     - 'Graph editor': 'editors-graph.md'
     - 'GUI editor': 'editors-gui.md'
-    - 'MIDI editor': 'editors-midi.md'
-    - 'OSC editor': 'editors-osc.md'
     - 'Component editors': 'component-editors.md'
     - 'Custom components': 'custom-components.md'
   - 'Code editing':
@@ -21,7 +19,6 @@ nav:
     - 'Coding audio components': 'coding-audio.md'
     - 'Coding video components': 'coding-video.md'
     - 'Coding OpenGL video components': 'coding-video-gl.md'
-    - 'Coding TinkerForge components': 'coding-tinkerforge.md'
     - 'Properties & animation': 'coding-properties.md'
     - 'Annotations': 'coding-annotations.md'
     - 'Additional annotations': 'coding-annotations-extra.md'

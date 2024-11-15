@@ -1,10 +1,10 @@
 # Core components
 
-Core components can be used with all files (audio, video, tinkerforge, etc.) in the graph editor.
+Core components can be used with all root types in the graph editor.
 
 ## core:container
 
-Component that can contain other components. Use `core|audio|video:container:in|out` to add ports.
+Component that can contain other components.
 
 ## core:custom
 

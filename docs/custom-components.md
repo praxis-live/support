@@ -8,7 +8,7 @@ Custom components are defined in PXG (`.pxg`) files. A PXG file can also contain
 components and their connections, so you can also create your own files for sharing common 
 configurations of components the same way.
 
-The Start Page can install components from the following repository automatically
+The Dashboard can install components from the following repository automatically
 into your palette, or you can download them manually.
 
 [https://github.com/praxis-live/components](https://github.com/praxis-live/components)

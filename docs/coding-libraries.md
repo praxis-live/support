@@ -31,14 +31,10 @@ A Maven PURL has the following format :
 `pkg:maven/{group-id}/{artefact-id}@{version}`
 
 The PURL for any library can be found in searching at
-[https://search.maven.org](https://search.maven.org)
+[https://central.sonatype.com/](https://central.sonatype.com/)
 eg. the PURL for
-[https://search.maven.org/artifact/org.apache.commons/commons-lang3/3.11/jar](https://search.maven.org/artifact/org.apache.commons/commons-lang3/3.11/jar)
-is `pkg:maven/org.apache.commons/commons-lang3@3.11`
+[https://central.sonatype.com/artifact/org.apache.commons/commons-lang3/3.17.0](https://central.sonatype.com/artifact/org.apache.commons/commons-lang3/3.17.0)
+is `pkg:maven/org.apache.commons/commons-lang3@3.17.0`
 
 Only `pkg:maven` PURLs are supported at present, and query parameters are not
 yet supported.
-
-The Maven dependency resolution is currently based on
-[Apache Ivy](https://ant.apache.org/ivy/). Cached dependencies are stored in the
-default (`~/.ivy2/cache`) location.

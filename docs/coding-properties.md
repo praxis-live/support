@@ -37,23 +37,29 @@ boolean getBoolean(boolean def);
 boolean getBoolean(); // equivalent to getBoolean(false)
 ```
 
-There are also some shorthand functions for working with properties.
+There are also some shorthand casting functions for working with properties, values
+and strings.
 
 ```java
 Property prop;
 
-double d = d(prop); // shorthand for prop.getDouble()
-float f = f(prop); // shorthand for (float) prop.getDouble()
-int i = i(prop); // shorthand for prop.getInt()
-String s = s(prop); // shorthand for prop.get().toString()
-boolean b = b(prop); // shorthand for prop.getBoolean()
+double d = D(prop); // shorthand for prop.getDouble()
+float f = F(prop); // shorthand for (float) prop.getDouble()
+int i = I(prop); // shorthand for prop.getInt()
+String s = S(prop); // shorthand for prop.get().toString()
+boolean b = B(prop); // shorthand for prop.getBoolean()
 ```
+
+!!! important
+    The deprecated, lower-case casting functions have now been removed. Make sure
+    to update your projects in an earlier version of PraxisLIVE.
 
 ## Animation
 
 `Property` supports animation through a `Property.Animator` object, with multiple keyframes
- and a variety of easing modes available. Animations will continue running even when code is
-changed - use the `isAnimating()` to only start an animation if one is not already running.
+and a variety of easing modes available. Animations will continue running even when code is
+changed - use the `isAnimating()` or `whenDone(...)` to only start an animation if one is
+not already running.
 
 ### Methods on Property
 

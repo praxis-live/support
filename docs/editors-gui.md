@@ -8,7 +8,7 @@ If the GUI was open (running), the external window will be closed and the panel
 editor.
 
 To make changes to the control panel you need to enable the edit overlay. Toggle
-the `Edit` button in the editor toolbar (or use `CTRL-e`). Component boundaries
+the `Edit` button in the editor toolbar (or use `CTRL-E`). Component boundaries
 will now highlight as you hover over them and you can select component by clicking
 on them. Switch off the edit overlay (using the same button / keys) to re-enable
 use of the control panel.
